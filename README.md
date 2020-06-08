@@ -1,6 +1,6 @@
 # Launchbase-rocketseat-introducao-a-programacao-web
 
-O objetivo é disponibilizar os Desafios 1-1 a 1-4
+O objetivo é disponibilizar minhas resoluções para os Desafios 1-1 a 1-4
 
 Introdução à programação WEB
 
