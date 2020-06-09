@@ -3,23 +3,26 @@
 // console.log(name)
 //desafio
 // Criar um programa que calcula a média das notas entre os alunos e envia mensagem do cálculo da média
-const aluno01 = {
-  nome: "Yone",
-  nota: 9.8
-}
 
-const aluno02 = {
-  nome: "Suzanna",
-  nota: 10
-}
+const alunos = [{
+    nome: "Yone",
+    nota: 9.8
+  },
 
-const aluno03 = {
-  nome: "Billie Jean",
-  nota: 2
-}
+  {
+    nome: "Suzanna",
+    nota: 10
+  },
 
+  {
+    nome: "Billie Jean",
+    nota: 2
+  }
+]
 
-const media = (aluno01.nota + aluno02.nota + aluno03.nota) / 3
+const nomesDeAlunos = ["Yone", "Suzanna", "Billie Jean"]
+
+const media = (alunos[0].nota + alunos[1].nota + alunos[2].nota) / 3
 
 //se a média for maior que 5, parabenizar a turma
 if (media > 5) {
@@ -28,4 +31,4 @@ if (media > 5) {
   console.log('A média é menor que 5')
 }
 
-console.log(media)
+console.log(alunos[0].nome)
