@@ -2,11 +2,11 @@
 // const name = "Yone Shinzato"
 // console.log(name)
 //desafio
-// Criar um programa que calcula a média das notas entre os alunos e envia mensagem do cálculo da média
+// Criar um programa que calcula a média das turmas de alunos e envia mensagem do cálculo da média
 
-const alunos = [{
+const alunosDaTurmaA = [{
     nome: "Yone",
-    nota: 9.8
+    nota: 1.8
   },
 
   {
@@ -20,15 +20,51 @@ const alunos = [{
   }
 ]
 
-const nomesDeAlunos = ["Yone", "Suzanna", "Billie Jean"]
+const alunosDaTurmaB = [{
+    nome: "Clayton",
+    nota: 10
+  },
 
-const media = (alunos[0].nota + alunos[1].nota + alunos[2].nota) / 3
+  {
+    nome: "Roberta",
+    nota: 10
+  },
 
-//se a média for maior que 5, parabenizar a turma
-if (media > 5) {
-  console.log(`A média foi de ${media}. Parabéns`)
-} else {
-  console.log('A média é menor que 5')
+  {
+    nome: "Cibele",
+    nota: 0
+  },
+  {
+    nome: "Novo",
+    nota: 5
+  },
+  {
+    nome: "Novo1",
+    nota: 10
+  }
+]
+
+function calculaMedia(alunos) {
+  let soma = 0;
+  for (let i = 0; i < alunos.length; i++) {
+    soma = soma + alunos[i].nota
+  }
+  const media = soma / alunos.length
+  return media
 }
 
-console.log(alunos[0].nome)
+const media1 = calculaMedia(alunosDaTurmaA)
+const media2 = calculaMedia(alunosDaTurmaB)
+
+//se a média for maior que 5, parabenizar a turma
+function enviaMensagem(media, turma) {
+  if (media > 5) {
+    console.log(`A média da ${turma} é de ${media}. Parabéns`)
+  } else {
+    console.log(`A média da ${turma} é menor que 5`)
+  }
+}
+
+// console.log(alunos[0].nome)
+enviaMensagem(media1, "turmaA")
+enviaMensagem(media2, "turmaB")
